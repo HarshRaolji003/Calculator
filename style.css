@@ -1,54 +1,71 @@
-:root {
-    --operator-color: #8257E5;
-    --background-color: #1E1E1E;
-    --main-width: 250px;
-}
-
 body {
-    /* background: var(--background-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #202020;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
-
-.contain {
-    padding: 25px;
-    border: 2px solid black;
-    /* width: 250px; */
-    max-width: fit-content;
-    height: auto;
-    margin-inline: auto;
-    border-radius: 40px;
-    box-shadow: 0px 0px 6px 9px #8257E5;
-    /* background-color: rgb(44, 3, 44); */
+.calculator {
+    background-color: #282828;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 300px;
 }
 
 .display {
-    width: var(--main-width);
-    border: 2px solid black;
-    height: 60px;
-    border-radius: 15px;
-    text-align: right;
-    font-size: large;
-    padding-top: 10px;
-    padding-right: 5px ;
+    background-color: #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: white;
     
 }
-
-.section {
-    /* border: 1px solid; */
-    padding: 4px;
-    width: var(--main-width);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
+.display .expression {
+    font-size: 18px;
+    color: #888;
 }
 
-.btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    font-size: large;
-    text-align: center;
-    margin: 4px;
-    box-shadow: 0px 1px 5px 2px;
+.display .result {
+    font-size: 36px;
+    text-align: right;
+}
 
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    background-color: #444;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+
+}
+.button:hover{
+    background-color: #555;
+}
+.button.operator {
+    background-color: #663399;
+}
+
+.button.operator:hover {
+    background-color: #8844cc;
+}
+
+.button.ce, .button.c {
+    background-color: #bb44cc;
+}
+
+.button.ce:hover, .button.c:hover {
+    background-color: #dd66ee;
 }
